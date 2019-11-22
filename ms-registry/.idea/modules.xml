@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ms-account/ms-account.iml" filepath="$PROJECT_DIR$/../ms-account/ms-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ms-api/ms-api.iml" filepath="$PROJECT_DIR$/../ms-api/ms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ms-config/ms-config.iml" filepath="$PROJECT_DIR$/../ms-config/ms-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ms-product/ms-product.iml" filepath="$PROJECT_DIR$/../ms-product/ms-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-registry.iml" filepath="$PROJECT_DIR$/ms-registry.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,48 @@
+version: '3'
+services:
+  registry:
+    image: ms-registry:0.1.0-SNAPSHOT
+    ports:
+      - 8761:8761
+    networks:
+      - ms-networks
+  config:
+    image: ms-config:0.1.0-SNAPSHOT
+    environment:
+      EUREKA_SERVER: http://registry:8761/eureka/
+    depends_on:
+      - registry
+    ports:
+      - 8888:8888
+    networks:
+      - ms-networks
+  api:
+    image: ms-api:0.1.0-SNAPSHOT
+    environment:
+      EUREKA_SERVER: http://registry:8761/eureka/
+    depends_on:
+      - registry
+      - config
+    ports:
+      - 9070:8762
+    networks:
+      - ms-networks
+  product:
+    image: ms-product:0.1.0-SNAPSHOT
+    environment:
+      EUREKA_SERVER: http://registry:8761/eureka/
+    depends_on:
+      - api
+    networks:
+      - ms-networks
+  account:
+    image: ms-account:0.1.0-SNAPSHOT
+    environment:
+      EUREKA_SERVER: http://registry:8761/eureka/
+    depends_on:
+      - product
+    networks:
+      - ms-networks
+
+networks:
+  ms-networks:

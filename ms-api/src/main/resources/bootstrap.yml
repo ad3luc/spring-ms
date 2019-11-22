@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ms-api
+
+# eureka server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true

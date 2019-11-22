@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: @project.artifactId@
+
+build:
+  version: @project.version@
+  timestamp: @maven.build.timestamp@
+
+zuul:
+  prefix: /api
+  stripPrefix: true
+  routes:
+    ms-account:
+      path: /account/**
+      stripPrefix: false
+      serviceId: ms-account
+    ms-product:
+      path: /product/**
+      stripPrefix: false
+      serviceId: ms-product
+
+# port
+server:
+  port: 8762

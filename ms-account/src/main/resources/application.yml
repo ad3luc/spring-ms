@@ -1,0 +1,11 @@
+# service name
+spring:
+  application:
+    name: @project.artifactId@
+
+server:
+  port: 0
+
+build:
+  version: @project.version@
+  timestamp: @maven.build.timestamp@
